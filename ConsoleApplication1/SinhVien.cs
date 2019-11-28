@@ -55,7 +55,7 @@ namespace ConsoleApplication1
         }
         public void NhapTT()
         {
-            Console.Write("Nhap MSV: ");
+            Console.Write("Nhap MSV:");
             MaSo = Console.ReadLine();
             Console.Write("Nhap Ten: ");
             TenSV = Console.ReadLine();
@@ -66,10 +66,10 @@ namespace ConsoleApplication1
         }
         public void xuatTT()
         {
-            Console.WriteLine("MSSV: " + MaSo);
-            Console.WriteLine("Ten: " + TenSV);
-            Console.WriteLine("Khoa: " + Khoa);
-            Console.WriteLine("Nhap DTB: " + DiemTB);
+            Console.WriteLine("MSSV: " + this.MaSo);
+            Console.WriteLine("Ten: " + this.TenSV);
+            Console.WriteLine("Khoa: " + this.Khoa);
+            Console.WriteLine("Nhap DTB: " + this.DiemTB);
         }
     }
 }
