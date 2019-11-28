@@ -5,16 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ConsoleApplication1
-{
+{//pl
     class SinhVien
     {
-        public int MaSo { get; set; }
+        public string MaSo { get; set; }
         public string TenSV { get; set; }
         public string Khoa { get; set; }
         public double DiemTB { get; set; }
         public SinhVien()
         {
-            MaSo = 1;
+            MaSo = "1";
             TenSV = "Nguyen Van A";
             Khoa = "CNTT";
             DiemTB = 7;
@@ -26,14 +26,14 @@ namespace ConsoleApplication1
             Khoa = stu.Khoa;
             DiemTB = stu.DiemTB;
         }
-        public SinhVien(int id, string ten, string kh, float dtb)
+        public SinhVien(string id, string ten, string kh, float dtb)
         {
             MaSo = id;
             TenSV = ten;
             Khoa = kh;
             DiemTB = dtb;
         }
-        public int StudentID //Property dai dien cho thuoc tinh SID
+        public string StudentID //Property dai dien cho thuoc tinh SID
         {
             get { return MaSo; } //lay du lieu
             set { MaSo = value; } //Gan du lieu
@@ -52,6 +52,24 @@ namespace ConsoleApplication1
         {
             get { return DiemTB; }
             set { DiemTB = value; }
+        }
+        public void NhapTT()
+        {
+            Console.Write("Nhap MSV: ");
+            MaSo = Console.ReadLine();
+            Console.Write("Nhap Ten: ");
+            TenSV = Console.ReadLine();
+            Console.Write("Nhap Khoa: ");
+            Khoa = Console.ReadLine();
+            Console.Write("Nhap DTB: ");
+            DiemTB = Convert.ToDouble(Console.ReadLine());
+        }
+        public void xuatTT()
+        {
+            Console.WriteLine("MSSV: " + MaSo);
+            Console.WriteLine("Ten: " + TenSV);
+            Console.WriteLine("Khoa: " + Khoa);
+            Console.WriteLine("Nhap DTB: " + DiemTB);
         }
     }
 }
